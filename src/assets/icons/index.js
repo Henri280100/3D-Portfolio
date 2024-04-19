@@ -20,7 +20,9 @@ import angular from './angular.svg'
 import kwe from './kwe.svg'
 import dksh from './dksh.svg'
 import html from './html.svg'
+import portfolio from './portfolio.svg'
 export {
+    portfolio,
     html,
     dksh,
     kwe,

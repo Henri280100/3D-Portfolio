@@ -18,6 +18,7 @@ import {
   kwe,
   dksh,
   html,
+  portfolio,
 } from "../assets/icons";
 
 export const skills = [
@@ -149,14 +150,14 @@ export const projects = [
     ],
     link: "",
   },
-  //   {
-  //     iconUrl: car,
-  //     theme: "btn-back-blue",
-  //     name: "3D Portfolio",
-  //     description:
-  //       "Create an exceptional 3D portfolio that boldly presents cutting-edge features, stunning images, and comprehensive information specifically tailored for employers",
-  //     link: "https://github.com/adrianhajdin/project_next13_car_showcase",
-  //   },
+  {
+    iconUrl: portfolio,
+    theme: "btn-back-blue",
+    name: "3D Portfolio",
+    description:
+      "Create an exceptional 3D portfolio that boldly presents cutting-edge features, stunning images, and comprehensive information specifically tailored for employers",
+    link: "https://henri280100.github.io/3D-Portfolio/",
+  },
   //   {
   //     iconUrl: snapgram,
   //     theme: "btn-back-pink",
