@@ -1,4 +1,5 @@
 import { Suspense, useEffect, useRef, useState } from "react";
+import { soundoff, soundon } from "../assets/icons";
 import { Canvas } from "@react-three/fiber";
 import Loader from "../component/Loader";
 import Island from "../models/Island";
@@ -7,7 +8,6 @@ import Bird from "../models/Bird";
 import Plane from "../models/Plane";
 import HomeInfo from "../component/HomeInfo";
 import sakura from "../assets/sakura.mp3";
-import { soundoff, soundon } from "../assets/icons";
 
 function Home() {
   const audioRef = useRef(new Audio(sakura));
