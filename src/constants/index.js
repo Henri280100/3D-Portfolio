@@ -130,8 +130,8 @@ export const socialLinks = [
 
 export const projects = [
   {
-    iconUrl: kwe,
-    theme: "btn-back-light-white",
+    iconUrl: "",
+    theme: "",
     name: "Logistics",
     description: [
       "Adaptation of a logistics application from desktop to web application.",
@@ -141,8 +141,8 @@ export const projects = [
     link: "",
   },
   {
-    iconUrl: dksh,
-    theme: "btn-back-red",
+    iconUrl: "",
+    theme: "",
     name: "Market Expansion Services",
     description: [
       "Our mission is to design and develop an exceptional web application, that not only offers an easy-to-use interface, but also a visually appealing look and seamless user interaction.",
