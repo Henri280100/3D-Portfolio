@@ -132,7 +132,7 @@ export const projects = [
   {
     iconUrl: kwe,
     theme: "btn-back-light-white",
-    name: "KGIT (KWE)",
+    name: "Logistics",
     description: [
       "Adaptation of a logistics application from desktop to web application.",
       "As a Front-End developer, my responsibilities are to create a new UI/UX design, migrate data from the customer's desktop application to the web,",
@@ -143,7 +143,7 @@ export const projects = [
   {
     iconUrl: dksh,
     theme: "btn-back-red",
-    name: "DKSH (DiethelmKellerSiberHegner)",
+    name: "Market Expansion Services",
     description: [
       "Our mission is to design and develop an exceptional web application, that not only offers an easy-to-use interface, but also a visually appealing look and seamless user interaction.",
       "Our team is dedicated to creating a top-notch platform that will exceed your expectations.",

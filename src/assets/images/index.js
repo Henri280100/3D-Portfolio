@@ -1,7 +1,3 @@
-import hitachivantara from './hitachivantara.png'
+import hitachivantara from "./hitachivantara.png";
 
-export {
-    
-    hitachivantara,
-    
-}
+export { hitachivantara };
