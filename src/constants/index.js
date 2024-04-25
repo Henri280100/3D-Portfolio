@@ -15,10 +15,10 @@ import {
   mysql,
   spring,
   angular,
-  kwe,
-  dksh,
+  logistics,
   html,
   portfolio,
+  mes,
 } from "../assets/icons";
 
 export const skills = [
@@ -130,8 +130,8 @@ export const socialLinks = [
 
 export const projects = [
   {
-    iconUrl: "",
-    theme: "",
+    iconUrl: logistics,
+    theme: "btn-back-light-white",
     name: "Logistics",
     description: [
       "Adaptation of a logistics application from desktop to web application.",
@@ -141,8 +141,8 @@ export const projects = [
     link: "",
   },
   {
-    iconUrl: "",
-    theme: "",
+    iconUrl: mes,
+    theme: "btn-back-light-white",
     name: "Market Expansion Services",
     description: [
       "Our mission is to design and develop an exceptional web application, that not only offers an easy-to-use interface, but also a visually appealing look and seamless user interaction.",
