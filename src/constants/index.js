@@ -100,7 +100,7 @@ export const experiences = [
     company_name: "Hitachi Vantara VietNam",
     icon: hitachivantara,
     iconBg: "#FFF",
-    date: "May 2022 - January 2023",
+    date: "January 2022 - January 2023",
     points: [
       "I specialize in the development and maintenance of web applications using React.js, Angular, and other related technologies.",
       "When working with cross-functional teams, including designers, product managers, and fellow developers, I ensure that we create high-quality products.",
