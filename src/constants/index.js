@@ -63,11 +63,6 @@ export const skills = [
     type: "BackEnd",
   },
   {
-    imageUrl: nodejs,
-    name: "Node.js",
-    type: "Backend",
-  },
-  {
     imageUrl: react,
     name: "React",
     type: "Frontend",
@@ -76,11 +71,6 @@ export const skills = [
     imageUrl: redux,
     name: "Redux",
     type: "State Management",
-  },
-  {
-    imageUrl: angular,
-    name: "Angular",
-    type: "Frontend",
   },
   {
     imageUrl: tailwindcss,
@@ -150,14 +140,14 @@ export const projects = [
     ],
     link: "",
   },
-  {
-    iconUrl: portfolio,
-    theme: "btn-back-blue",
-    name: "3D Portfolio",
-    description:
-      "Create an exceptional 3D portfolio that boldly presents cutting-edge features, stunning images, and comprehensive information specifically tailored for employers",
-    link: "https://henri280100.github.io/3D-Portfolio/",
-  },
+  // {
+  //   iconUrl: portfolio,
+  //   theme: "btn-back-blue",
+  //   name: "3D Portfolio",
+  //   description:
+  //     "Create an exceptional 3D portfolio that boldly presents cutting-edge features, stunning images, and comprehensive information specifically tailored for employers",
+  //   link: "https://henri280100.github.io/3D-Portfolio/",
+  // },
   //   {
   //     iconUrl: snapgram,
   //     theme: "btn-back-pink",
