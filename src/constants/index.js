@@ -6,7 +6,6 @@ import {
   github,
   javascript,
   linkedin,
-  nodejs,
   react,
   redux,
   tailwindcss,
