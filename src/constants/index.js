@@ -120,21 +120,29 @@ export const projects = [
   {
     iconUrl: logistics,
     theme: "btn-back-light-white",
-    name: "Logistics",
-    description: [
+    name: "KWE Logistics",
+   description: [
       "Adaptation of a logistics application from desktop to web application.",
       "As a Front-End developer, my responsibilities are to create a new UI/UX design, migrate data from the customer's desktop application to the web,",
-      "and build functionalities based on customer requirements.",
+      "Using ReactJS to develop modules.",
+      "Using Redux to manage data.",
+      "Using KenduUI to design and enhance UI/UX for better user engagement.",
+      "Converted legacy Windows applications to web-based platform.",
+      "Investigate requirements and hidden logics in the legacy platform.",
+      "Documented Modules on Jira for team reference."
     ],
     link: "",
   },
   {
     iconUrl: mes,
     theme: "btn-back-light-white",
-    name: "Market Expansion Services",
+    name: "DKSH Market Expansion Services",
     description: [
-      "Our mission is to design and develop an exceptional web application, that not only offers an easy-to-use interface, but also a visually appealing look and seamless user interaction.",
-      "Our team is dedicated to creating a top-notch platform that will exceed your expectations.",
+      "Design and develop an exceptional web application, that not only offers an easy-to-use interface, but also a visually appealing look and seamless user interaction.",
+      "Using Angular Material to design and enhance UI/UX.",
+      "Using Angular 8 and TypeScript.",
+      "Conduct application analysis to optimize performance.",
+      "Fix delay loading data from FrontEnd side.",
     ],
     link: "",
   },
@@ -143,7 +151,8 @@ export const projects = [
     theme: "btn-back-light-white",
     name: "E-commerce web application",
     description: [
-      "Developed a web application for e-commerce, allowing users to browse and purchase products online.",
+      "A personal project to practice and improve my skills in web development when I was in military service.",
+      "The project is a web application that allows users to browse and purchase products online.", 
       "Implemented features such as product search, shopping cart, and user authentication.",
       "Utilized NextJS and Spring Boot for the front-end and back-end development.",
       "Implemented responsive design to ensure a consistent user experience across different devices and screen sizes.",
