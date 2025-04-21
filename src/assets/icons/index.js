@@ -20,6 +20,7 @@ import logistics from "./logistics.svg";
 import html from "./html.svg";
 import portfolio from "./portfolio.png";
 import mes from "./market_expansion_services.png";
+import tg from "./tg.svg";
 export {
   mes,
   logistics,
@@ -43,4 +44,5 @@ export {
   contact,
   soundon,
   soundoff,
+  tg
 };

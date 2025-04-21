@@ -15,7 +15,7 @@ import {
   spring,
   tailwindcss,
   typescript,
-  tg,
+  tg
 } from "../assets/icons";
 import { hitachivantara } from "../assets/images";
 
