@@ -1,24 +1,23 @@
-import { hitachivantara } from "../assets/images";
 import {
   contact,
   css,
   git,
   github,
+  html,
   javascript,
   linkedin,
+  logistics,
+  mes,
+  mysql,
+  postgresql,
   react,
   redux,
+  spring,
   tailwindcss,
   typescript,
-  postgresql,
-  mysql,
-  spring,
-  angular,
-  logistics,
-  html,
-  portfolio,
-  mes,
+  tg,
 } from "../assets/icons";
+import { hitachivantara } from "../assets/images";
 
 export const skills = [
   {
@@ -139,28 +138,16 @@ export const projects = [
     ],
     link: "",
   },
-  // {
-  //   iconUrl: portfolio,
-  //   theme: "btn-back-blue",
-  //   name: "3D Portfolio",
-  //   description:
-  //     "Create an exceptional 3D portfolio that boldly presents cutting-edge features, stunning images, and comprehensive information specifically tailored for employers",
-  //   link: "https://henri280100.github.io/3D-Portfolio/",
-  // },
-  //   {
-  //     iconUrl: snapgram,
-  //     theme: "btn-back-pink",
-  //     name: "Chat Application",
-  //     description:
-  //       "Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.",
-  //     link: "https://github.com/adrianhajdin/social_media_app",
-  //   },
-  //   {
-  //     iconUrl: estate,
-  //     theme: "btn-back-black",
-  //     name: "E-Commerce web application",
-  //     description:
-  //       "Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.",
-  //     link: "https://github.com/adrianhajdin/projects_realestate",
-  //   },
+  {
+    iconUrl: tg,
+    theme: "btn-back-light-white",
+    name: "E-commerce web application",
+    description: [
+      "Developed a web application for e-commerce, allowing users to browse and purchase products online.",
+      "Implemented features such as product search, shopping cart, and user authentication.",
+      "Utilized NextJS and Spring Boot for the front-end and back-end development.",
+      "Implemented responsive design to ensure a consistent user experience across different devices and screen sizes.",
+    ],
+    link: "",
+  },
 ];

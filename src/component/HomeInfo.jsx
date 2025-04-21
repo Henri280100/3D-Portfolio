@@ -21,14 +21,14 @@ const renderContent = {
   ),
   2: (
     <InfoBox
-      text="8 months worked at Hitachi Vantara and picked up many skills along the way"
+      text="1 year 3 months of experience. I worked at Hitachi Vantara and picked up many skills along the way"
       link="/about"
       btnText="Learn more"
     />
   ),
   3: (
     <InfoBox
-      text="Led multiple projects to success over the years. Curious about the impact?"
+      text="Hands-on experience in React, Angular, Spring Boot, PostgreSQL, and Git. Curious about the impact?"
       link="/projects"
       btnText="Visit my portfolio"
     />
