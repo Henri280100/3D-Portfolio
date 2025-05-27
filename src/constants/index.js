@@ -15,7 +15,8 @@ import {
   spring,
   tailwindcss,
   typescript,
-  tg
+  tg,
+  pc
 } from "../assets/icons";
 import { hitachivantara } from "../assets/images";
 
@@ -158,7 +159,7 @@ export const projects = [
     link: "",
   },
   {
-    iconUrl: "PC",
+    iconUrl: pc,
     theme: "btn-back-light-white",
     name: "PC Craft",
     description: [

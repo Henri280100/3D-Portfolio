@@ -21,7 +21,10 @@ import html from "./html.svg";
 import portfolio from "./portfolio.png";
 import mes from "./market_expansion_services.png";
 import tg from "./tg.svg";
+import pc from "./pc-logo.svg"
+
 export {
+  pc,
   mes,
   logistics,
   portfolio,
