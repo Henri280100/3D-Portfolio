@@ -131,7 +131,6 @@ export const projects = [
       "Investigate requirements and hidden logics in the legacy platform.",
       "Documented Modules on Jira for team reference."
     ],
-    link: "",
   },
   {
     iconUrl: mes,
@@ -144,7 +143,6 @@ export const projects = [
       "Conduct application analysis to optimize performance.",
       "Fix delay loading data from FrontEnd side.",
     ],
-    link: "",
   },
   {
     iconUrl: tg,
@@ -158,5 +156,18 @@ export const projects = [
       "Implemented responsive design to ensure a consistent user experience across different devices and screen sizes.",
     ],
     link: "",
+  },
+  {
+    iconUrl: "PC",
+    theme: "btn-back-light-white",
+    name: "PC Craft",
+    description: [
+      "A personal project to explore no-code tools and improve my UI/UX skills using Framer.",
+      "The project is a modern showcase website built to highlight a custom PC setup service.", 
+      "Designed interactive components such as testimonials, product highlights, contact form, and smooth page transitions.",
+      "Utilized Framer’s visual editor and custom code overrides to implement responsive layout and text truncation logic.",
+      "Focused on clean design, performance, and mobile responsiveness to ensure a seamless user experience across devices.",
+    ],
+    link: "https://pccraft.framer.website/",
   },
 ];
