@@ -12,10 +12,8 @@ import {
   react,
   tailwindcss,
   typescript,
-  angular,
-  sap,
-  fpt,
-  spring,
+  tg,
+  pc
 } from "../assets/icons";
 import { hitachivantara } from "../assets/images";
 
@@ -96,7 +94,6 @@ export const projects = [
       "Developed OData services with SAP CAP to integrate with SAP S/4HANA backend systems.",
       "Collaborated with functional consultants to implement business logic and ensure module compliance.",
     ],
-    link: "",
   },
   {
     imageUrl: cisd,
@@ -136,11 +133,37 @@ export const projects = [
     module: null,
     name: "DKSH Market Expansion Services",
     description: [
-      "Designed and developed a web application with seamless user interaction and modern UI/UX.",
-      "Built with Angular 8, TypeScript, and Angular Material for enterprise-grade interfaces.",
-      "Conducted application analysis to optimize performance and fix frontend data loading delays.",
-      "Delivered a visually appealing, easy-to-use platform for market expansion services.",
+      "Design and develop an exceptional web application, that not only offers an easy-to-use interface, but also a visually appealing look and seamless user interaction.",
+      "Using Angular Material to design and enhance UI/UX.",
+      "Using Angular 8 and TypeScript.",
+      "Conduct application analysis to optimize performance.",
+      "Fix delay loading data from FrontEnd side.",
+    ],
+  },
+  {
+    iconUrl: tg,
+    theme: "btn-back-light-white",
+    name: "E-commerce web application",
+    description: [
+      "A personal project to practice and improve my skills in web development when I was in military service.",
+      "The project is a web application that allows users to browse and purchase products online.", 
+      "Implemented features such as product search, shopping cart, and user authentication.",
+      "Utilized NextJS and Spring Boot for the front-end and back-end development.",
+      "Implemented responsive design to ensure a consistent user experience across different devices and screen sizes.",
     ],
     link: "",
+  },
+  {
+    iconUrl: pc,
+    theme: "btn-back-light-white",
+    name: "PC Craft",
+    description: [
+      "A personal project to explore no-code tools and improve my UI/UX skills using Framer.",
+      "The project is a modern showcase website built to highlight a custom PC setup service.", 
+      "Designed interactive components such as testimonials, product highlights, contact form, and smooth page transitions.",
+      "Utilized Framer’s visual editor and custom code overrides to implement responsive layout and text truncation logic.",
+      "Focused on clean design, performance, and mobile responsiveness to ensure a seamless user experience across devices.",
+    ],
+    link: "https://pccraft.framer.website/",
   },
 ];

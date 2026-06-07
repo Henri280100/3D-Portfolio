@@ -14,13 +14,16 @@ import spring from "./spring.svg";
 import angular from "./angular.svg";
 import logistics from "./logistics.svg";
 import html from "./html.svg";
-import sap from "./sap.svg";
-import fpt from "./fpt.svg";
-import kwe from "./kwe.svg";
-import dksh from "./dksh.svg";
-import cisd from "./cisd.svg";
+import portfolio from "./portfolio.png";
+import mes from "./market_expansion_services.png";
+import tg from "./tg.svg";
+import pc from "./pc-logo.svg"
 
 export {
+  pc,
+  mes,
+  logistics,
+  portfolio,
   html,
   css,
   git,
