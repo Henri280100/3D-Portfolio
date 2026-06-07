@@ -22,7 +22,6 @@ import pc from "./pc-logo.svg"
 export {
   pc,
   mes,
-  logistics,
   portfolio,
   html,
   css,
