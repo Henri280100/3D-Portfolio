@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" fill="none">
+  <rect width="400" height="200" rx="16" fill="#0d1b2a"/>
+  <rect x="0" y="0" width="400" height="200" rx="16" fill="url(#kweGrad)" opacity="0.9"/>
+  <defs>
+    <linearGradient id="kweGrad" x1="0" y1="0" x2="400" y2="200">
+      <stop offset="0%" stop-color="#0072ff"/>
+      <stop offset="100%" stop-color="#00c6ff"/>
+    </linearGradient>
+  </defs>
+  <rect x="30" y="60" width="120" height="80" rx="8" fill="white" opacity="0.15"/>
+  <rect x="45" y="75" width="40" height="30" rx="4" fill="white" opacity="0.3"/>
+  <rect x="95" y="75" width="40" height="30" rx="4" fill="white" opacity="0.3"/>
+  <rect x="45" y="110" width="90" height="15" rx="3" fill="white" opacity="0.2"/>
+  <path d="M200 130h130l20-30H220l-20 30z" fill="white" opacity="0.9"/>
+  <rect x="200" y="130" width="150" height="35" rx="6" fill="white" opacity="0.85"/>
+  <circle cx="225" cy="170" r="14" fill="#0d1b2a" opacity="0.6"/>
+  <circle cx="225" cy="170" r="8" fill="white"/>
+  <circle cx="325" cy="170" r="14" fill="#0d1b2a" opacity="0.6"/>
+  <circle cx="325" cy="170" r="8" fill="white"/>
+  <rect x="215" y="115" width="60" height="20" rx="4" fill="white" opacity="0.7"/>
+  <text x="30" y="45" fill="white" font-family="Arial,sans-serif" font-weight="bold" font-size="22">KWE Logistics</text>
+  <text x="30" y="175" fill="white" font-family="Arial,sans-serif" font-size="13" opacity="0.8">Web Migration · React · Redux</text>
+</svg>

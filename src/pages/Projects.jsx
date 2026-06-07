@@ -1,71 +1,80 @@
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { projects } from "../constants";
-import { arrow } from "../assets/icons";
 import CTA from "../component/CTA";
+import { ScrollReveal, StaggerWrap, scaleIn } from "../component/Motion";
 
 const Projects = () => {
   return (
-    <section className="max-container">
-      <h1 className="head-text">
-        My{" "}
-        <span className="blue-gradient_text font-semibold drop-shadow">
-          Projects
-        </span>
-      </h1>
+    <section className="max-container page-bg">
+      <ScrollReveal>
+        <h1 className="head-text">
+          My{" "}
+          <span className="blue-gradient_text font-semibold">Projects</span>
+        </h1>
+      </ScrollReveal>
 
-      <p className="mt-5 flex flex-col gap-3 text-slate-500">
-        Throughout the years, I've undertaken numerous projects, some of which I
-        created independently, while others were developed during my time with
-        companies. However, there are certain projects that hold a special place
-        in my heart. Some of these projects are open-source, while others are
-        not. If you happen to come across any of them and find them interesting,
-        please feel free to explore the underlying code and share your thoughts
-        on how they can be improved. Your collaboration and contributions are
-        highly appreciated!
-      </p>
+      <ScrollReveal delay={1}>
+        <p className="mt-5 flex flex-col gap-3 text-slate-500 max-w-2xl">
+          Enterprise projects delivered across two companies — SAP BTP solutions at
+          FPT Software and front-end engineering at Hitachi Vantara. Each project
+          reflects hands-on experience with real-world business requirements.
+        </p>
+      </ScrollReveal>
 
-      <div className="flex flex-wrap my-20 gap-16">
-        {projects.map((project) => (
-          <div className="lg:w-[400px] w-full" key={project.name}>
-            <div className="block-container w-12 h-12">
-              <div className={`btn-back rounded-xl ${project.theme}`} />
-              <div className="btn-front rounded-xl flex justify-center items-center">
-                <img
-                  src={project.iconUrl}
-                  alt="threads"
-                  className="w-1/2 h-1/2 object-contain"
-                />
+      <StaggerWrap className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 my-12 sm:my-16">
+        {projects.map((project, index) => (
+          <motion.article
+            key={project.name}
+            variants={scaleIn}
+            custom={index}
+            whileHover={{ y: -6 }}
+            className="project-card-v2 group"
+          >
+            <div className="relative overflow-hidden rounded-xl mb-5">
+              <img
+                src={project.imageUrl}
+                alt={project.name}
+                className="w-full h-36 sm:h-44 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+              {project.module && (
+                <span className="absolute top-3 right-3 px-3 py-1 text-xs font-bold text-white bg-blue-600/90 backdrop-blur-sm rounded-full">
+                  {project.module}
+                </span>
+              )}
+            </div>
+
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <h4 className="text-lg sm:text-xl font-poppins font-semibold text-black-500 leading-snug">
+                  {project.name}
+                </h4>
+                <p className="text-sm text-blue-500 font-medium mt-1">
+                  {project.company}
+                </p>
               </div>
             </div>
 
-            <div className="mt-5 flex flex-col">
-              <h4 className="text-2xl font-poppins font-semibold">
-                {project.name}
-              </h4>
-              <p className="mt-2 text-slate-500">{project.description}</p>
-              <div className="mt-5 flex items-center gap-2 font-poppins">
-                <Link
-                  to={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold text-blue-600"
+            <ul className="mt-4 space-y-2.5">
+              {project.description.map((point, i) => (
+                <li
+                  key={i}
+                  className="text-sm text-slate-500 flex items-start gap-2.5 leading-relaxed"
                 >
-                  Live Link
-                </Link>
-                <img
-                  src={arrow}
-                  alt="arrow"
-                  className="w-4 h-4 object-contain"
-                />
-              </div>
-            </div>
-          </div>
+                  <span className="text-blue-500 mt-0.5 shrink-0 font-bold">▸</span>
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </motion.article>
         ))}
-      </div>
+      </StaggerWrap>
 
       <hr className="border-slate-200" />
 
-      <CTA />
+      <ScrollReveal>
+        <CTA />
+      </ScrollReveal>
     </section>
   );
 };

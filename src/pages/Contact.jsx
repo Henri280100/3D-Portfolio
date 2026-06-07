@@ -1,32 +1,24 @@
-import { Suspense, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Canvas } from "@react-three/fiber";
-
-import Loader from "../component/Loader";
+import { motion } from "framer-motion";
 import useAlert from "../hooks/useAlert";
 import Alert from "../component/Alert";
-import Fox from "../models/Fox";
+import { socialLinks } from "../constants";
+import { ScrollReveal, fadeUp } from "../component/Motion";
 
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const { alert, showAlert, hideAlert } = useAlert();
   const [loading, setLoading] = useState(false);
-  const [currentAnimation, setCurrentAnimation] = useState("idle");
 
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
   };
 
-  const handleFocus = () => {
-    setCurrentAnimation("walk");
-  }
-  const handleBlur = () => setCurrentAnimation("idle");
-
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    setCurrentAnimation("hit");
 
     emailjs
       .send(
@@ -52,19 +44,12 @@ const Contact = () => {
 
           setTimeout(() => {
             hideAlert(false);
-            setCurrentAnimation("idle");
-            setForm({
-              name: "",
-              email: "",
-              message: "",
-            });
-          }, [3000]);
+            setForm({ name: "", email: "", message: "" });
+          }, 3000);
         },
         (error) => {
           setLoading(false);
           console.error(error);
-          setCurrentAnimation("idle");
-
           showAlert({
             show: true,
             text: "I didn't receive your message 😢",
@@ -75,100 +60,146 @@ const Contact = () => {
   };
 
   return (
-
-    <section className='relative flex lg:flex-row flex-col max-container h-[100vh]'>
+    <section className="max-container page-bg">
       {alert.show && <Alert {...alert} />}
 
-      <div className='flex-1 min-w-[50%] flex flex-col'>
-        <h1 className='head-text'>Get in Touch</h1>
+      <ScrollReveal>
+        <h1 className="head-text">
+          Get in{" "}
+          <span className="blue-gradient_text font-semibold">Touch</span>
+        </h1>
+      </ScrollReveal>
 
-        <form
+      <ScrollReveal delay={1}>
+        <p className="mt-5 text-slate-500 max-w-xl">
+          Looking for a SAP BTP developer or technical consultant? I&apos;m currently
+          at FPT Software and open to new opportunities. Send me a message!
+        </p>
+      </ScrollReveal>
+
+      <div className="mt-10 sm:mt-14 flex lg:flex-row flex-col gap-8 lg:gap-12">
+        <motion.form
           ref={formRef}
           onSubmit={handleSubmit}
-          className='w-full flex flex-col gap-7 mt-14'
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          custom={2}
+          className="flex-1 flex flex-col gap-6 sm:gap-7"
         >
-          <label className='text-black-500 font-semibold'>
-            Name
-            <input
-              type='text'
-              name='name'
-              className='input'
-              placeholder='John'
-              required
-              value={form.name}
-              onChange={handleChange}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
-            />
-          </label>
-          <label className='text-black-500 font-semibold'>
-            Email
-            <input
-              type='email'
-              name='email'
-              className='input'
-              placeholder='John@gmail.com'
-              required
-              value={form.email}
-              onChange={handleChange}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
-            />
-          </label>
-          <label className='text-black-500 font-semibold'>
+          {["name", "email"].map((field) => (
+            <label key={field} className="text-black-500 font-semibold capitalize">
+              {field}
+              <input
+                type={field === "email" ? "email" : "text"}
+                name={field}
+                className="input"
+                placeholder={field === "email" ? "you@email.com" : "Your name"}
+                required
+                value={form[field]}
+                onChange={handleChange}
+              />
+            </label>
+          ))}
+          <label className="text-black-500 font-semibold">
             Your Message
             <textarea
-              name='message'
-              rows='4'
-              className='textarea'
-              placeholder='Write your thoughts here...'
+              name="message"
+              rows="5"
+              className="textarea"
+              placeholder="Tell me about your project or opportunity..."
               value={form.message}
               onChange={handleChange}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
             />
           </label>
 
-          <button
-            type='submit'
+          <motion.button
+            type="submit"
             disabled={loading}
-            className='btn'
-            onFocus={handleFocus}
-            onBlur={handleBlur}
+            className="btn"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
-            {loading ? "Sending..." : "Submit"}
-          </button>
-        </form>
-      </div>
+            {loading ? "Sending..." : "Send Message"}
+          </motion.button>
+        </motion.form>
 
-      <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>
-        <Canvas
-          camera={{
-            position: [0, 0, 5],
-            fov: 75,
-            near: 0.1,
-            far: 1000,
-          }}
-        >
-          <directionalLight position={[0, 0, 1]} intensity={2.5} />
-          <ambientLight intensity={1} />
-          <pointLight position={[5, 10, 0]} intensity={2} />
-          <spotLight
-            position={[10, 10, 10]}
-            angle={0.15}
-            penumbra={1}
-            intensity={2}
-          />
+        <div className="lg:w-[380px] flex flex-col gap-5 sm:gap-6">
+          {[
+            {
+              title: "Let's Connect",
+              body: "Based in Vietnam. Experienced in SAP enterprise projects across logistics, manufacturing, and finance modules.",
+            },
+            {
+              title: "Current Role",
+              body: "SAP Technical Consultant · BTP Developer at FPT Software since June 2025.",
+            },
+          ].map((card, i) => (
+            <motion.div
+              key={card.title}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={i + 3}
+              whileHover={{ y: -4 }}
+              className="contact-card"
+            >
+              <h3 className="text-lg sm:text-xl font-poppins font-semibold text-white">
+                {card.title}
+              </h3>
+              <p className="text-blue-100/70 mt-3 text-sm leading-relaxed">
+                {card.body}
+              </p>
+            </motion.div>
+          ))}
 
-          <Suspense fallback={<Loader />}>
-            <Fox
-              currentAnimation={currentAnimation}
-              position={[0.5, 0.35, 0]}
-              rotation={[12.629, -0.6, 0]}
-              scale={[0.5, 0.5, 0.5]}
-            />
-          </Suspense>
-        </Canvas>
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={5}
+            className="contact-card"
+          >
+            <h3 className="text-lg font-poppins font-semibold text-white mb-4">
+              Find me on
+            </h3>
+            <div className="flex flex-col gap-3">
+              {socialLinks
+                .filter((link) => link.name !== "Contact")
+                .map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-blue-100/80 hover:text-white transition-colors"
+                  >
+                    <img
+                      src={link.iconUrl}
+                      alt={link.name}
+                      className="w-5 h-5 object-contain brightness-0 invert"
+                    />
+                    {link.name}
+                  </a>
+                ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={6}
+            className="contact-card"
+          >
+            <p className="text-sm text-blue-100/60">Email</p>
+            <p className="text-white font-medium mt-1 break-all">phamk883@gmail.com</p>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

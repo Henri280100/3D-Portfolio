@@ -1,16 +1,18 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const CTA = () => {
   return (
     <section className="cta">
       <p className="cta-text">
-        Have a project in mind? <br className="sm:block hidden" />
-        Let's build something together!
+        Need a SAP BTP developer? <br className="sm:block hidden" />
+        Let&apos;s build something together!
       </p>
-      <Link to="/contact" className="btn">
-        Contact
-      </Link>
+      <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+        <Link to="/contact" className="btn whitespace-nowrap">
+          Contact Me
+        </Link>
+      </motion.div>
     </section>
   );
 };
