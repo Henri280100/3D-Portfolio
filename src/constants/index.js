@@ -13,7 +13,11 @@ import {
   tailwindcss,
   typescript,
   tg,
-  pc
+  pc,
+  sap,
+  spring,
+  angular,
+  fpt
 } from "../assets/icons";
 import { hitachivantara } from "../assets/images";
 
@@ -86,7 +90,7 @@ export const projects = [
     iconUrl: sap,
     theme: "btn-back-blue",
     company: "FPT Software",
-    module: "MM",
+    module: "SD MM",
     name: "CISD 1 — Materials Management",
     description: [
       "SAP BTP development for Materials Management (MM) module on the CISD 1 project.",

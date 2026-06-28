@@ -18,6 +18,11 @@ import portfolio from "./portfolio.png";
 import mes from "./market_expansion_services.png";
 import tg from "./tg.svg";
 import pc from "./pc-logo.svg"
+import sap from "./sap-icon.svg";
+import fpt from "./fpt.svg";
+import kwe from "./kwe.svg";
+import dksh from "./dksh.svg";
+import cisd from "./cisd.svg";
 
 export {
   pc,
@@ -43,5 +48,6 @@ export {
   fpt,
   kwe,
   dksh,
-  cisd,
+  tg,
+  cisd
 };

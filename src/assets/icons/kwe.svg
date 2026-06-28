@@ -19,5 +19,5 @@
   <circle cx="325" cy="170" r="8" fill="white"/>
   <rect x="215" y="115" width="60" height="20" rx="4" fill="white" opacity="0.7"/>
   <text x="30" y="45" fill="white" font-family="Arial,sans-serif" font-weight="bold" font-size="22">KWE Logistics</text>
-  <text x="30" y="175" fill="white" font-family="Arial,sans-serif" font-size="13" opacity="0.8">Web Migration · React · Redux</text>
+  <text x="30" y="175" fill="white" font-family="Arial,sans-serif" font-size="13" opacity="0.8">Web Migration ï¿½ React ï¿½ Redux</text>
 </svg>
